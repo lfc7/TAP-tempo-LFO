@@ -1,6 +1,13 @@
 #! /bin/bash
+# bash script to generate numbers for the waveForm looking-Up table
+# output on stdout
+#
+
+#resolutions
 XMAX=47
 YMAX=255
+
+## ok go !
 
 echo "Ramp"
 for x in $(seq 0 $XMAX);
