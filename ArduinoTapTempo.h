@@ -21,6 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.  
  */
+ /* 
+ * NOTE:
+ * short mods of code by LFC7
+ * 
+ */
  
 #ifndef ARDUINO_TAP_TEMPO_H
 #define ARDUINO_TAP_TEMPO_H
@@ -66,9 +71,11 @@ class ArduinoTapTempo
     inline void setMinBPM(float bpm) { maxBeatLengthMS = 60000.0 / bpm; } // Sets the maximum beats per minute permissible.
     // This is another way of setting the maximum beat length.
 
+ 
+ /*  Custom mods are here!!!!!!!!!!! ********************/
     inline void setBeatLength(unsigned long beatMS) {beatLengthMS = beatMS;}
     inline int getTapsInChain() {return tapsInChain;}
-
+ /* *****************************************************/
 
   private:
     // config
