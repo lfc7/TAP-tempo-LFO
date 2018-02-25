@@ -32,7 +32,7 @@ with love.
 //include custom characteres
 #include "customChar.h"
 
-// include the ArduinoTapTempo library
+// include the modified ArduinoTapTempo library
 #include "ArduinoTapTempo.h"
 
 
