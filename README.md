@@ -16,6 +16,9 @@
    
    -Tap tempo can be constrain in up & dw limits, avoiding bad taps
    
+   ![taptempo_photo](/export/tapTempo_LFO.jpg)
+   
+   
   ```
      ____     __          ______              _       ____ ___  ___  ___
     / __/_ __/ /___ _____/_  __/______  ___  (_)___  |_  // _ \/ _ \/ _ \
