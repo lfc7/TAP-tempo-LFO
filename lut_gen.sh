@@ -20,7 +20,7 @@ stringStripNCharsFromStart() {
 usage()
 {
 	echo
-	echo "$0 generate looking up table for some waveForm"
+	echo "$0 generate looking up table for some waveForms"
 	echo
 	echo "USAGE: $0 X Y "
 	echo "where X is the number of steps (default = 48)"
