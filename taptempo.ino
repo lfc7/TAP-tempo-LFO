@@ -213,7 +213,7 @@ void button_int()
 
         } else {
           tapTempo.update(false);
-          //tapTempo.resetTapChain();
+          tapTempo.resetTapChain();
         }
 
       }
