@@ -314,7 +314,7 @@ void loop()
 
 
     //chk if divider rotary has changed
-    unsigned int new_divider = map( analogRead(DIVIDER_SEL), 0, 1024, 0, 10 );
+    unsigned int new_divider = map( analogRead(DIVIDER_SEL), 0, 1023, 0, 9 );
     if ( divider != new_divider)
     {
       divider = new_divider;
@@ -380,7 +380,7 @@ void loop()
     }
 
     //chk lfo wave_sel_pot
-    wave_sel = map( analogRead(WAVE_SEL), 0, 1024, 0, 7 );
+    wave_sel = map( analogRead(WAVE_SEL), 0, 1023, 0, 6 );
 
 
     //update LCD
