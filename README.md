@@ -16,6 +16,21 @@
    
    -Tap tempo can be constrain in up & dw limits, avoiding bad taps
    
+   -- Config at start 
+   
+   Press TAP-button and plug power on , keep TAP-button press , adjust preset with rotactors and knobs.
+   
+   - "Clock-OUT lenght" can be set with DIVIDER rotactor from 1/48 beat to 10/48 beat.
+   
+   - "Clock-OUT polarity" can be set with LIMIT knob.
+   
+   - "running Beats-Until-Chain-Reset" can be set with BPM knob from 2 to 8
+   
+   - "Total-Tap to compute" can be set with WAVEFORM rotactor from 2 to 9
+   
+   Release TAP button to save.
+   
+   
    ![taptempo_photo](/export/tapTempo_LFO.jpg)
    
    
