@@ -1,5 +1,5 @@
 /*
-   TAP-tempo LFO
+TAP-tempo LFO
 
    ( designed for arduino nano ATmega328P/16MHz/5v and I2C LCD16*2 )
 
