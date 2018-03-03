@@ -1,5 +1,5 @@
 /*
-TAP-tempo LFO
+   TAP-tempo LFO
 
    ( designed for arduino nano ATmega328P/16MHz/5v and I2C LCD16*2 )
 
@@ -66,7 +66,7 @@ TAP-tempo LFO
 
 #define DIVIDER_SEL A0
 
-#define TAP_PIN     3 // the one with int1
+#define TAP_PIN       3 // the one with int1
 
 
 #define SYNC_OUT_PIN   8 // 
@@ -196,7 +196,7 @@ void beatClockInt()
     // update ArduinoTapTempo if in manual (knob) bpm
     if (flag_inhibit_tap)
     {
-      tapTempo.setBeatLength( _q * 1000 );
+      tapTempo.setBeatLength( ( _q / 1000UL ) * 48UL ); // _q * 1000
       tapTempo.resetTapChain();
       flag_inhibit_tap = false;
     }
@@ -215,7 +215,8 @@ void beatClockInt()
   }
 
   //pseudo LFO
-  unsigned int dduty = *(waveform[wave_sel] + sync_counter);
+  unsigned long dividedSync = (( tick_counter * (480UL / max_tick)) / 10UL );// % 48UL; //sync_counter
+  unsigned int dduty = *(waveform[wave_sel] + dividedSync);
   Timer1.setPwmDuty( PWM_OUT_PIN, dduty );
 
 }
@@ -399,6 +400,7 @@ void loop()
       switch (divider)
       {
         case 0:    //
+          //blanche
           max_tick = 96;
           break;
 
@@ -444,7 +446,7 @@ void loop()
 
         case 9:
           // hold
-          max_tick = 0;  //HOLD
+          max_tick = 1;  //HOLD
           break;
 
         default:
@@ -555,7 +557,7 @@ void RefreshLcd(unsigned int _bpm, unsigned int _low_limit, unsigned int _high_l
   lcd.setCursor(0, 1);
 
   //Divider
-  if ( ! _div )
+  if ( _div == 1 )
   {
     lcd.print(F("[HLD]"));
   }
