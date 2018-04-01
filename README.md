@@ -1,6 +1,6 @@
-# TAP-tempo-LFO
+# TAP-tempo LFO
 
-   TAP-tempo LFO v0.1b (beta ver, need testing)
+   TAP-tempo LFO v1.0 - tested
    
    (designed for arduino nano ATmega328P/16MHz/5v)
    
