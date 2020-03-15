@@ -30,7 +30,7 @@
 class ArduinoTapTempo
 {
   public:
-    static const int MAX_TAP_VALUES = 10;
+    static const int MAX_TAP_VALUES = 12;
 
     bool onBeat(); // returns true if a beat has occured since the last update(), not accurate enough for timing in music but useful for LEDs or other indicators
     // Note that this may return true in rapid succession while tapping and setting the tempo to a slightly slower rate than the current tempo,

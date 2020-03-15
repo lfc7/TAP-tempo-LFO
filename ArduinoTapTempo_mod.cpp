@@ -144,13 +144,32 @@ unsigned long ArduinoTapTempo::getAverageTapDuration()
     amount = totalTapValues;
   
   unsigned long runningTotalMS = 0;
+ 
   for(int i = 0; i < amount; i++) {
     runningTotalMS += tapDurations[i];
-  }
+  } 
+  
   unsigned long avgTapDurationMS = runningTotalMS / amount;
+  
+ 
+  /*//modif a tester
+  unsigned long avgTapDurationMS;
+  runningTotalMS = tapDurations[0];
+  
+  for(int i = 1; i < amount; i++) 
+  {
+    runningTotalMS += tapDurations[i];
+    runningTotalMS = runningTotalMS / 2;
+  }
+  avgTapDurationMS = runningTotalMS;
+
+  //fin modif */
+
   if(avgTapDurationMS < minBeatLengthMS) {
     return minBeatLengthMS;
   }
+  
+ 
   return avgTapDurationMS;
 }
 
